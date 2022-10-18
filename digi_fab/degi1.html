@@ -8,91 +8,53 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <h1>1.GITに関して </h1>
+    <h1>組み立て式ピンセット </h1>
     <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
     <div>
-    GITとは
-    <strong>「分散型バージョン管理システム」</strong>という<br>
-    <strong>「ファイルのバージョン管理が簡単にできるツール」</strong>のことです。<br>    
-     バージョンとはファイルを編集したあと履歴として管理することができるものです。<br>
-     <img src="./images/IMG_2009(1).JPEG2.JPEG" width="30%"><br>
-     
-     <br>
-     
-     
+        <font size="6">スケッチ（イラスト・設計図）</font><br>
+        <img src="./images2/IMG-2291 (1).jpg" width="20%"><br>
+特にストーリーは思いつかなかったので、普通のピンセットとの違いをイラストにしてみました。<br>
+<img src="./images2/IMG-2290.jpg" width="30%"><br>
+これは設計図です。<br>
+左にある黄色のやつは3Dプリンターで印刷する時に必要な<strong>最低限の厚さ</strong>が書いてあります。<br>
+これは最初に設計したものが厚さがなさすぎてスタッフの方が参考にと書いてくれました。<br>
+右側にあるのは左のを参考にして設計したものです。<br>
+
+<font size="6">成功作品</font><br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_SdijdxA9fk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe><br>
+        
+<img src="./images2/IMG-2297.jpg" width="30%"><br>
+<a href="./cura/pinset1.stl">stlファイル1</a><br>
+<a href="./cura/pinset2.stl">stlファイル2</a><br>
+<a href="./cura/pinset4.stl">stlファイル3</a><br>
+組み立て式なのでファイルの数が複数あります。<br>
+<font size="6">失敗作品</font><br>
+<img src="./images2/IMG-2299.jpg" width="30%"><br>   
+  左から順にどこが失敗なのか説明していきます。<br>
+  まず左にあるものは3Dプリントした際<strong>サポート</strong>というもので開けた穴が塞がってしまい失敗作になってしまった。<br>
+  真ん中にあるのはサポートをなくすために印刷の向きを変えた結果最後まで印刷されなかった者たちです。<br>
+  原因は3Dプリンターにありました。<br>
+  右にあるのは印刷の際、設計の時よりも分厚くなってしまい組み立てることが出来ませんでした。<br>
+  <br>
+  <img src="./images2/2022-10-18 (1).png" width="30%"><br> 
+  これは最初に作ろうとした「折り畳み式ピンセット」です。<br>
+  これは設計図にある最低限の厚さがなく3Dプリントできなくなり断念しました。<br>
+  <br>
+  <font size="6">作成理由＋作品の説明</font><br>
+  なにごともコンパクトにしたいという想いからこの作品が思いつきました。<br>
+  この作品は組み立て式にすることにより従来のピンセットよりコンパクトに持ち運びができるようになりました。<br>
+<br>
+
     </div>
-
-    <font size="6">リポジトリに関して</font>
-    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
-    <div>
-    GITを理解するうえで必要な知識の一つである「リポジトリ」と呼ばれるものがある。<br>
-    リポジトリとはファイルや履歴を記録してくれる保管庫のようなものです。<br>
-    リポジトリには2種類あります。 <br>
-    <ol>
-        <li>リモートリポジトリ</li>
-        <li>ローカルリポジトリ</li>
-    </ol>
-    この2つが存在します。<br>
-    1つ目のリモートリポジトリはwebサーバー上に存在しています。そして共有で使用することが出来ます。<br>
-    2つ目のローカルリポジトリはローカルのPC上に存在しています。<br>
-    <img src="./images/IMG_2011.jpg" width="30%"><br>
-<br>
-<font size="6">4つのアクション</font>
-<ol>
-    <li>add</li>
-    <li>commit</li>
-    <li>pull</li>
-    <li>push</li>
-</ol>
-<font size="5">add</font><br>
-addとは履歴を残す前の仮登録のようなものです。<br>
-<br>
-<font size="5">commet</font><br>
-commitは、addを行ったと後に、自分のローカルリポジトリに作業内容の履歴を保存する作業のことで、<br>
-ファイルを編集した内容・日時・作業者を記録したファイルが生成されて保存されます。<br>
-<br>
-<font size="5">pull</font><br>
-pullは、他の人の作業した履歴を自分のローカルリポジトリのファイルに反映させる作業です。<br>
-<br>
-<font size="5">push</font><br>
-pushは、自分のローカルリポジトリにあるファイルをリモートリポジトリにアップして保存する作業です。<br>
-<br>
-<font size="6">「add・commit・pull・push」の流れ</font><br>
-【1】自分の手元でファイルを編集する。<br>
-【2】編集したファイルをaddでインデックスに登録。<br>
-【3】インデックスに登録した内容をcommitして、履歴として、ローカルリポジトリに保存する。<br>
-【4】ローカルリポジトリをリモートリポジトリに登録する時に、他のユーザーがリモートリポジトリを更新していた場合、<br>
-一旦pullでリモートリポジトリの内容を、ローカルリポジトリに落としてくる。<br>
-【5】リモートリポジトリの内容をローカルリポジトリに取り込んだ後で、ローカルリポジトリの内容を、リモートリポジトリにpushして保存する。<br>
-<br>
-※ここでのインデックスとは、
-<strong>リポジトリにコミットする準備をするための場所</strong>のことです。<br>
-<br>
-<img src="./images/IMG_2013.jpg" width="30%"><br>
-<a href="https://qiita.com/a_goto/items/0fe40b17105d1ac1c40b" target="_blank">参考サイト</a><br>
-
-</div>
-   <div>
-<h1>2.htmlに関して</h1>
-htmlとは
-<strong>webページを作成させるための言語です。</strong><br>
-「HT」とはハイパーテキスト、「M」とはマークアップ、「L」とはランゲージの事です。<br>
-ここでの「マークアップ」とは文章の役割を示すという意味の言葉です。例えば、見出しや段落・表・リンクなど<br>
-<br>
-htmlでは文字は普通のテキストだけでなく、「見出し」にしたり、「太文字」や「文字の色」を変更して強調したり、<br>
-「下線」を入れて装飾したりすることができます。<br>
-これをできるようにするには<strong>「タグ」</strong>を理解する必要があります。<br>
-<br>
-<font size="6">主な「タグ」の種類</font><br>
+    <font size="6">制作プロセスの中で調べたこと</font><br>
 <ul>
-    <li>h:見出し（h1,h2,h3・・・）</li>
-    <li>p:段落（通常のテキスト）</li>
-    <li>a:リンクを挿入</li>
-    <li>li:箇条書き</li>
-    <li>strong:太文字で強調</li>
+   <li>ファブラボスタッフの方に3Dプリントターの使い方を教わった。</li>
+   <li>ファブラボスタッフの方にcuraの使い方を教わった。</li>
 </ul>
+    
+
 <br>
-<a href="https://udemy.benesse.co.jp/design/web-design/what-is-html.html" target="_blank">参考サイト</a>
+
 
 </body>
 </html>
