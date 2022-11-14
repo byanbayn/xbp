@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+    <!-- ⑥↓タイトルを変えてみよう -->
+    <title>第６回</title>
+    <!-- ⑤スタイルシートの設定をしよう -->
+    <!-- h1.htmlからある行をコピペしてくればOK -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>賃貸情報の分析</h1>
+    <!-- 塊ごとにdivタグで区切るようにしましょう。 -->
+    <div>
+        <font size="6">オススメ駅</font><br>
+        今回オススメする駅は<strong>馬車道駅</strong>です。<br>
+        <img src="./2images/dennsh 2022-11-14 234326.png" width="40%"><br>
+        <img src="./2images/路線別の平均築年数.png" width="40%"><br>
+        <img src="./2images/面積と家賃.png" width="40%"><br>
+        最初のグラフは学校までの合計時間を示しています。<br>
+        ここからみなとみらい線が１番短いことがわかります。<br>
+        二つ目のグラフは路線別の平均築年数を表しています。<br>
+        みなとみらい線に属する家は新築に近いことがわかります。<br>
+        三つ目は面積と家賃を表しています。<br>
+        みなとみらい線に属する家は面積が広いことがわかります。<br>
+        <br>
+        <font size="6">オススメ賃貸物件</font><br>
+        
+        <strong>ザ・タワー横浜北仲 58階 2LDK</strong>ここがオススメ物件になります。<br>
+        家賃はなんと<strong>150万円</strong>になります。<br>
+        この物件はみなとみらい線にある馬車道駅から徒歩1分のところにあります。<br>
+        他にも京浜東北線、ブルーライン線が通っている桜木町駅まで徒歩で8分でついてしまう位置にあります。<br>
+        しかもこの物件の近くには様々な施設があり、生活に困ることはまずないと思います。<br>
+        <a href="https://www.kencorp.co.jp/housing/properties/193130/2019120692/?type=lease" target="_blank">物件詳細</a><br>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6500.283660673408!2d139.635886!3d35.451283!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7296bca850d2e19!2zMzXCsDI3JzA0LjYiTiAxMznCsDM4JzA5LjIiRQ!5e0!3m2!1sja!2sus!4v1668439311737!5m2!1sja!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <br>
+        ↑ここから付近にある施設を確認できます。<br>
+        普通の神大生には住むのは難しいですが、普通に囚われてしまうとオリジナリティが出せません。<br>
+        オリジナリティを出したいと思いこのぶっ飛んだ額の物件を選びました。<br>
+    </div>
+  
+        
+        <div>
+       ここから最初に見せたグラフのコードになります。<br>
+        </div>
+        <code>
+            <ol style="list-style:decimal-leading-zero outside;in-left:0;padding-left:36px;margin:0;background-color:#EEF;color:#000;">
+            <li style="background-color:#EFF;">import pandas as pd</li>
+            <li style="background-color:#EEF;">import matplotlib.pyplot as plt</li>
+            <li style="background-color:#EFF;">pd.set_option('display.unicode.east_asian_width', True)</li>
+            <li style="background-color:#EEF;">plt.rcParams['font.family'] = 'IPAexGothic'</li>
+            <li style="background-color:#EFF;">plt.rcParams['font.size']=9</li>
+            <li style="background-color:#EEF;">data_path = "xbp_suumo-main\data\yokohama_kawasaki.csv"</li>
+            <li style="background-color:#EFF;">df_data = pd.read_csv(data_path, encoding="utf-8-sig")</li>
+            <li style="background-color:#EEF;">print(df_data.columns)</li>
+            <li style="background-color:#EFF;">print(df_data["合計時間"].describe())</li>
+            <li style="background-color:#EEF;">print(df_data.groupby("路線").mean().loc[:,"合計時間"].sort_values()[:12])</li>
+            <li style="background-color:#EFF;">df_data.groupby("路線").mean().loc[:,"合計時間"].sort_values()[:12].plot.bar(figsize = (12, 8))</li>
+            <li style="background-color:#EEF;">plt.subplots_adjust(left=0.02, right=0.98,bottom=0.3)</li>
+            <li style="background-color:#EFF;">plt.show()</li>
+            <li style="background-color:#EEF;">print(df_data.groupby("路線").mean().loc[:,"家賃"].sort_values()[:12])</li>
+            <li style="background-color:#EFF;">df_data.groupby("駅").mean().loc[:,"家賃"].sort_values()[:12].plot.bar(figsize = (12, 8))</li>
+            <li style="background-color:#EEF;">plt.subplots_adjust(left=0.02, right=0.98,bottom=0.3)</li>
+            <li style="background-color:#EFF;">plt.show()</li>
+            </ol></code>
+        <div>
+        
+
+
+        <h2>今回学んだこと</h2>
+        <ul>
+        <li>最初ずっとファイルが見つからないとエラーが起こったので試行錯誤した結果6行目のCSVファイルの書き方に問題があった。<br>
+            CSVファイルのパスをただコピーするだけだとエラーが起こる。解決策は<strong>相対パスをコピー</strong>をして貼りつけるとエラーが消えて上手くいく。
+
+        </div>
+
+
+       
+
+
+
+
+
+    
+    
+        
+   
+</body>
+</html>
